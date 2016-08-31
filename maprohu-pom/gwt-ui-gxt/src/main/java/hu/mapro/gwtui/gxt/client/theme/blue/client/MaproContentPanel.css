@@ -1,0 +1,8 @@
+.body {
+  background-color: transparent !important;
+  border-color: #99BBE8;
+}
+
+.noHeader {
+  border-top-width: 0px; 
+}

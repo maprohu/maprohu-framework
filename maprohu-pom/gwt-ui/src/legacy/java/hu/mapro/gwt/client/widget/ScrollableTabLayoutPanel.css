@@ -1,0 +1,34 @@
+@sprite .leftEnabled {
+	gwt-image: 'tabPrevious';
+	background-position-x: 50%;
+	background-position-y: 50%;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+@sprite .rightEnabled {
+	gwt-image: 'tabNext';
+	background-position-x: 50%;
+	background-position-y: 50%;
+	width: auto;
+	height: auto;
+	cursor: pointer;
+}
+
+@sprite .leftDisabled {
+	gwt-image: 'tabPreviousDisabled';
+	background-position-x: 50%;
+	background-position-y: 50%;
+	width: auto;
+	height: auto;
+}
+
+@sprite .rightDisabled {
+	gwt-image: 'tabNextDisabled';
+	background-position-x: 50%;
+	background-position-y: 50%;
+	width: auto;
+	height: auto;
+}
+

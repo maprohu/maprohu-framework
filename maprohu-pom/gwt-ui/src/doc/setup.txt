@@ -1,0 +1,17 @@
+ProxyRequests On
+ProxyVia On
+
+
+
+<Proxy *>
+        Order deny,allow
+        Deny from none
+        Allow from all
+</Proxy>
+
+
+
+
+RewriteEngine On
+RewriteRule http://dl.google.com/gwt/DTD/xhtml.ent http://localhost/xhtml.ent [P]
+

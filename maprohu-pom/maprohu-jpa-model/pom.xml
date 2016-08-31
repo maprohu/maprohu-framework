@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-pom</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>maprohu-jpa-model</artifactId>
+	<packaging>jar</packaging>
+
+	<name>maprohu-jpa-model</name>
+	<dependencies>
+	
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-provided-deps</artifactId>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-test-deps</artifactId>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+	
+	
+	
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-jpa</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model</artifactId>
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-ui-gxt</artifactId>
+			<version>0.0.12-SNAPSHOT</version>
+		</dependency>
+		 -->
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-jpa-gwt-domain</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+						<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<id>VerifyRequestFactoryInterfaces</id>
+							<executable>${java.home}/bin/java</executable>
+							<!-- 
+							<executable>java</executable>
+							 -->
+							<arguments>
+								<!-- 
+								<argument>-Xmx512m</argument>
+								<argument>-XX:MaxHeapSize=512m</argument>
+								 -->
+								<argument>-cp</argument>
+								<classpath />
+								<argument>com.google.web.bindery.requestfactory.apt.ValidationTool</argument>
+								<argument>${project.build.outputDirectory}</argument>
+								<argument>hu.mapro.jpa.model.client.domain.FetchRequestFactory</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											exec-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.2,)
+										</versionRange>
+										<goals>
+											<goal>exec</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore />
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

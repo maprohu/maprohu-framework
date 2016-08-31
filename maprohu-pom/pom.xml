@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-framework</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+	<artifactId>maprohu-pom</artifactId>
+	<packaging>pom</packaging>
+
+	<properties>
+		<java.version>6</java.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>common-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>common-test-deps</artifactId>
+			<scope>test</scope>
+			<type>pom</type>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>${java.version}</source>
+					<target>${java.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<modules>
+		<module>maprohu-model</module>
+		<module>maprohu-model-analyzer</module>
+		<module>maprohu-meta-annotations</module>
+		<module>maprohu-model-analyzer-meta</module>
+		<module>maprohu-jpa</module>
+		<!-- 
+		<module>maprohu-model-analyzer-bean</module>
+		<module>maprohu-model-roo-annotation</module>
+		 -->
+		<module>maprohu-model-analyzer-test</module>
+		<module>maprohu-model-analyzer-test-domain</module>
+		
+		<!-- 
+		<module>earth-api-utility-library-gwt</module>
+		 -->
+		<module>maprohu-model-gwt</module>
+		
+		<module>gwt-common</module>
+		<module>gwt-data</module>
+		<module>gwt-ui</module>
+		<module>gwt-ui-gxt</module>
+		
+		<module>maprohu-jpa-gwt-domain</module>
+		<module>maprohu-jpa-types</module>
+		<module>maprohu-jpa-meta</module>
+		<module>maprohu-jpa-model</module>
+		<module>maprohu-jpa-builder</module>
+		
+		<module>maprohu-generator</module>
+		<module>maprohu-generator-gwt-proxy</module>
+		<module>maprohu-generator-gwt-proxy-plugin</module>
+		<module>maprohu-generator-gwt-ui</module>
+		<module>maprohu-generator-gwt-ui-plugin</module>
+
+		<module>gxt-theme-green</module>
+		<module>maprohu-report</module>
+	</modules>
+</project>

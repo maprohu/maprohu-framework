@@ -1,0 +1,16 @@
+<model xmlns="http://mapro.hu/model/descriptor">
+	<client-class>hu.mapro.jpa.model.domain.client.AutoBeans</client-class>
+	<server-class>hu.mapro.jpa.model.domain.server.DomainService</server-class>
+	<shared-package>hu.mapro.jpa.model.domain.shared.generated</shared-package>
+	<generate>
+	
+		<meta-packages>
+			<value>hu.mapro.jpa.meta.value</value>
+		</meta-packages>
+		
+		<!-- 
+		<source-package>hu.mapro.jpa.model.domain.server.entities</source-package>
+		<source-package>hu.mapro.jpa.model.domain.shared.enums</source-package>
+		 -->
+	</generate>
+</model>

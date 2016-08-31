@@ -1,0 +1,30 @@
+.menuItem {
+  font-family: tahoma, arial, verdana, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 15px;
+  white-space: nowrap;
+}
+
+.label {
+  font-family: tahoma, arial, verdana, sans-serif;
+  font-size: 11px;
+  font-weight: normal;
+  line-height: 15px;
+}
+
+.blueBackground {
+  background-color: rgb(223, 232, 246);
+}
+
+.whiteBackground {
+  background-color: rgb(255, 255, 255);
+}
+
+.borderBottom {
+	border-bottom-width: 1px !important;
+}
+
+.menuItemSelected {
+	font-weight: bold !important;
+}

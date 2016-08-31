@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module rename-to='gwtui'>
+	<!-- <inherits name="com.google.gwt.json.JSON"/> -->
+	<inherits name="hu.mapro.gwt.data.Data" />
+	<inherits name='org.hibernate.validator.HibernateValidator' />
+	
+
+	<source path='client' />
+	<source path='shared' />
+
+
+</module>

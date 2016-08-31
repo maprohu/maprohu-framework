@@ -1,0 +1,40 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui"
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:m="urn:import:hu.mapro.gwt.client.widget"
+>
+
+	<ui:with field='constants' type='hu.mapro.gwt.client.widget.IUiConstants' />
+
+	<ui:style>
+		@eval headerTitleHeight hu.mapro.gwt.client.widget.UiConstants.headerTitleHeight();
+		@eval panelMargin hu.mapro.gwt.client.widget.UiConstants.panelMargin();
+		@eval frameWidth hu.mapro.gwt.client.widget.UiConstants.frameWidth();
+		@eval borderWidth hu.mapro.gwt.client.widget.UiConstants.borderWidth();
+		@eval minusBorderWidth hu.mapro.gwt.client.widget.UiConstants.minusBorderWidth();
+		@eval frameColor hu.mapro.gwt.client.widget.UiConstants.frameColor();
+		@eval borderColor hu.mapro.gwt.client.widget.UiConstants.borderColor();
+		@eval backgroundColor hu.mapro.gwt.client.widget.UiConstants.backgroundColor();
+		
+		.fillHorizontal {
+			width: 100%;
+		}
+		
+		@external header;
+		.menuGroup .header {
+			border-bottom: 1px solid borderColor;
+		}
+		
+		.menuGroup {
+			padding-bottom: 5px;
+		}
+
+	</ui:style>
+
+	<g:DisclosurePanel ui:field="panel" addStyleNames="{style.fillHorizontal} {style.menuGroup}" animationEnabled="true" open="true">
+		<g:VerticalPanel ui:field="groupPanel">
+		</g:VerticalPanel>
+	</g:DisclosurePanel>
+
+</ui:UiBinder>

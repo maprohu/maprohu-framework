@@ -1,0 +1,6 @@
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+entity jpa --class ~.server.domain.MyEntity
+field string --fieldName text
+web gwt setup
+web gwt all --proxyPackage ~.client.proxy --requestPackage ~.client.request
+

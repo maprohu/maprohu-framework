@@ -1,0 +1,149 @@
+@eval headerTitleHeight hu.mapro.gwt.client.widget.UiConstants.headerTitleHeight();
+@eval panelMargin hu.mapro.gwt.client.widget.UiConstants.panelMargin();
+@eval frameWidth hu.mapro.gwt.client.widget.UiConstants.frameWidth();
+@eval borderWidth hu.mapro.gwt.client.widget.UiConstants.borderWidth();
+@eval minusBorderWidth hu.mapro.gwt.client.widget.UiConstants.minusBorderWidth();
+@eval frameColor hu.mapro.gwt.client.widget.UiConstants.frameColor();
+@eval borderColor hu.mapro.gwt.client.widget.UiConstants.borderColor();
+@eval backgroundColor hu.mapro.gwt.client.widget.UiConstants.backgroundColor();
+
+
+.headerTitle {
+	background-color: frameColor;
+}
+
+.headerContent {
+	background-color: white;
+	border-color: borderColor;
+	border-bottom-style: solid;
+	border-top-style: solid;
+	border-bottom-width: borderWidth;
+	border-top-width: borderWidth;
+	padding: panelMargin;
+}
+
+.navigation {
+	background-color: backgroundColor;
+	border: borderWidth;
+	border-color: borderColor;
+	border-style: solid;
+}
+
+.tabPanel {
+	background-color: frameColor;
+/*	border: borderWidth;
+	border-color: borderColor;
+	border-style: solid;
+*/
+}
+
+
+.content {
+	background-color: backgroundColor;
+}
+
+.roundFrame {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;	
+	border: frameWidth;
+	border-color: frameColor;
+	border-style: solid;
+}
+
+.fill {
+	width: 100%;
+	height: 100%;
+}
+
+.fillHorizontal {
+	width: 100%;
+}
+
+@external gwt-SplitLayoutPanel-HDragger;
+.gwt-SplitLayoutPanel-HDragger {
+	background-color: frameColor;
+}
+
+@external header;
+
+.navigation .header {
+	border-bottom: 1px solid borderColor;
+}
+
+.menuGroup {
+	padding-bottom: 5px;
+}
+
+.toolbar {
+	border-bottom: 1px solid borderColor;	
+	padding: 2px;
+	background-color: frameColor;
+}
+
+.right {
+	float: right;
+}
+
+.menuArea {
+	padding: 3px;
+}
+
+.iconButton {
+	cursor: pointer;
+}
+
+.closeIcon {
+	vertical-align: text-top;
+	cursor: pointer;
+}
+
+@external gwt-TabLayoutPanel;
+@external gwt-TabLayoutPanelTab-selected;
+@external gwt-TabLayoutPanelContentContainer;
+@external gwt-TabLayoutPanelTab;
+@external gwt-TabLayoutPanelTabs;
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelContentContainer {
+	border: 1px solid borderColor;	
+	border-top-width: 0px; 	
+	background-color: backgroundColor;
+}
+
+/*
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+	position: relative;
+}
+*/
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+	border: 1px solid borderColor;
+	border-bottom-width: 0px;	
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+	border-bottom: borderWidth solid borderColor; 
+	z-index: 1;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+	padding-right: 4px;
+}
+
+.tabBorderClearer {
+	position:absolute; 
+	height: 0px; 
+	left: 0px; 
+	right: 0px; 
+	bottom: minusBorderWidth; 
+	z-index: 2; 
+	border-bottom: 	borderWidth solid backgroundColor;
+	display: none;
+}
+
+.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected .tabBorderClearer {
+	display: block;
+}
+
+

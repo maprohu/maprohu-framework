@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-pom</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+	<artifactId>gwt-data</artifactId>
+
+	<properties>
+		<spring.version>3.1.0.RELEASE</spring.version>
+	</properties>
+
+	<dependencies>
+
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-provided-deps</artifactId>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-test-deps</artifactId>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+
+
+
+		<dependency>
+			<groupId>com.google.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate.javax.persistence</groupId>
+			<artifactId>hibernate-jpa-2.0-api</artifactId>
+		</dependency>
+
+
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.security</groupId>
+			<artifactId>spring-security-core</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-orm</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-jpa-gwt-domain</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-jpa-model</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+		</dependency>
+
+	</dependencies>
+</project>

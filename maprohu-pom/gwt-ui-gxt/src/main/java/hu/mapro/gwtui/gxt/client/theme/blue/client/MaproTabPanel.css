@@ -1,0 +1,16 @@
+.tabBody {
+	border-color: #8db2e3;
+	background-color: transparent !important;
+}
+
+.tabHeader .tabStripSpacer,.tabFooter .tabStripSpacer {
+	border-left: 1px solid;
+	border-right: 1px solid; 
+	border-top: none;
+	border-bottom: none;
+	height: 0px;
+	font-size: 1px;
+	line-height: 1px;
+	border-color: #8db2e3;
+}
+

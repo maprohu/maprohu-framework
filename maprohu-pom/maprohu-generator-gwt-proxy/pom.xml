@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-pom</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>maprohu-generator-gwt-proxy</artifactId>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model-gwt</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-generator</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-jpa</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-envers</artifactId>
+		</dependency>
+		
+
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model-analyzer-test</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+			<scope>test</scope>
+		</dependency>
+
+	</dependencies>
+
+
+</project>

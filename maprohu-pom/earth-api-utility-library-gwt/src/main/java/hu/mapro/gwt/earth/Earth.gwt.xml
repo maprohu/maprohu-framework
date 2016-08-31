@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<module>
+	<!-- Inherit the core Web Toolkit stuff.                        -->
+	<inherits name="com.google.gwt.user.User"/>
+	<!-- Specify the paths for translatable code                    -->
+    <source path="client"/>
+	<source path="shared"/>
+	
+	<script src="extensions-0.2.1.pack.js"/>
+
+</module>

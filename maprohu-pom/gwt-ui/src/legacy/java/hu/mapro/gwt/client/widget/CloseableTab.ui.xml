@@ -1,0 +1,88 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder 
+	xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+>
+
+
+	<ui:with field='images' type='hu.mapro.gwtui.client.images.GwtUiImages' />
+
+	<ui:image field="tabClose"/>
+	<ui:image field="tabCloseHover"/>
+	<ui:image field="tabClosePassive"/>
+
+
+	<ui:style>
+		@eval headerTitleHeight hu.mapro.gwt.client.widget.UiConstants.headerTitleHeight();
+		@eval panelMargin hu.mapro.gwt.client.widget.UiConstants.panelMargin();
+		@eval frameWidth hu.mapro.gwt.client.widget.UiConstants.frameWidth();
+		@eval borderWidth hu.mapro.gwt.client.widget.UiConstants.borderWidth();
+		@eval minusBorderWidth hu.mapro.gwt.client.widget.UiConstants.minusBorderWidth();
+		@eval frameColor hu.mapro.gwt.client.widget.UiConstants.frameColor();
+		@eval borderColor hu.mapro.gwt.client.widget.UiConstants.borderColor();
+		@eval backgroundColor hu.mapro.gwt.client.widget.UiConstants.backgroundColor();
+		
+		
+		
+		.tabBorderClearer {
+			position:absolute; 
+			height: 0px; 
+			left: 0px; 
+			right: 0px; 
+			bottom: minusBorderWidth; 
+			z-index: 2; 
+			border-bottom: 	borderWidth solid backgroundColor;
+			display: none;
+		}
+		
+		@external gwt-TabLayoutPanel;
+		@external gwt-TabLayoutPanelTab-selected;
+		@external gwt-TabLayoutPanelTab;
+		@external gwt-TabLayoutPanelTabs;
+		
+		.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected {
+			border: 1px solid borderColor;
+			border-bottom-width: 0px;	
+		}
+		
+		.gwt-TabLayoutPanel .gwt-TabLayoutPanelTabs {
+			border-bottom: borderWidth solid borderColor; 
+			z-index: 1;
+		}
+		
+		.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab {
+			padding-right: 4px;
+		}
+		
+		.gwt-TabLayoutPanel .gwt-TabLayoutPanelTab-selected .tabBorderClearer {
+			display: block;
+		}
+		
+		@sprite .tabCloseIcon {
+			gwt-image: 'tabClose';
+		}
+
+		@sprite .tabCloseIcon:HOVER {
+			gwt-image: 'tabCloseHover';
+		}
+		
+		.closeIcon {
+			vertical-align: sub;
+			cursor: pointer;
+			margin-right: 3px;
+			display: inline-block;
+ 		}
+		
+		.tabLabel {
+			font-weight: normal;
+		}
+		
+	</ui:style>
+			
+	<g:HTMLPanel>
+		<g:InlineLabel ui:field="label" addStyleNames="{style.tabLabel}"/>
+		<g:InlineLabel ui:field="closeButton" addStyleNames="{style.tabCloseIcon} {style.closeIcon}" />
+		<div class="{style.tabBorderClearer}" ui:field="borderClearer" />
+	</g:HTMLPanel>
+</ui:UiBinder>

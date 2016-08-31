@@ -1,0 +1,127 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-pom</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+	<artifactId>maprohu-sandbox</artifactId>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model-gwt</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-common</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.validation</groupId>
+			<artifactId>validation-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>webapp-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>webapp-provided-deps</artifactId>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>webapp-test-deps</artifactId>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>domain-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>domain-provided-deps</artifactId>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+		 
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>danimer-webapp</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+		 
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>1.2</version>
+				<executions>
+					<execution>
+						<phase>process-classes</phase>
+			 			<goals>
+							<goal>exec</goal>
+						</goals>
+						<configuration>
+							<id>VerifyRequestFactoryInterfaces</id>
+							<executable>${java.home}/bin/java</executable>
+							<arguments>
+								<argument>-cp</argument>
+								<classpath />
+								<argument>com.google.web.bindery.requestfactory.apt.ValidationTool</argument>
+								<argument>${project.build.outputDirectory}</argument>
+								<argument>hu.mapro.sandbox.valueproxy.MyRequestFactory</argument>
+							</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+		<pluginManagement>
+			<plugins>
+				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<plugin>
+					<groupId>org.eclipse.m2e</groupId>
+					<artifactId>lifecycle-mapping</artifactId>
+					<version>1.0.0</version>
+					<configuration>
+						<lifecycleMappingMetadata>
+							<pluginExecutions>
+								<pluginExecution>
+									<pluginExecutionFilter>
+										<groupId>
+											org.codehaus.mojo
+										</groupId>
+										<artifactId>
+											exec-maven-plugin
+										</artifactId>
+										<versionRange>
+											[1.2,)
+										</versionRange>
+										<goals>
+											<goal>exec</goal>
+										</goals>
+									</pluginExecutionFilter>
+									<action>
+										<ignore></ignore>
+									</action>
+								</pluginExecution>
+							</pluginExecutions>
+						</lifecycleMappingMetadata>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+</project>

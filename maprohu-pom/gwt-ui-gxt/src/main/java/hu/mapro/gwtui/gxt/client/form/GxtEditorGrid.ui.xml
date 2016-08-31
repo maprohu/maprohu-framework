@@ -1,0 +1,82 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder 
+	xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" 
+	xmlns:container="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client" 
+	xmlns:row="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:menu="urn:import:com.sencha.gxt.widget.core.client.menu"
+	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+	xmlns:tb="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:grid="urn:import:com.sencha.gxt.widget.core.client.grid" 
+	xmlns:c="urn:import:com.sencha.gxt.widget.core.client"
+	xmlns:tabs="urn:import:com.sencha.gxt.widget.core.client" 
+>
+
+	<ui:style type="hu.mapro.gwtui.gxt.client.form.GxtEditorGrid.Style">
+		.menuItemSelected {
+			font-weight: bold !important;
+		}
+	</ui:style>
+
+	<!-- 
+	<ui:with type="com.sencha.gxt.core.client.util.Margins" field="outerMargins">
+		<ui:attributes top="0" right="0" bottom="0" left="0" />
+	</ui:with>
+	<ui:with type="com.sencha.gxt.widget.core.client.container.MarginData"
+		field="outerData">
+		<ui:attributes margins="{outerMargins}" />
+	</ui:with>
+	 -->
+	
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="rowFillData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="rowData">
+		<ui:attributes width="1" height="-1"/>
+	</ui:with>
+
+	<!-- 
+	<ui:with type="com.sencha.gxt.widget.core.client.TabItemConfig"
+		field="listTabConfig">
+		<ui:attributes text="List" />
+	</ui:with>
+	<ui:with type="com.sencha.gxt.widget.core.client.TabItemConfig"
+		field="filterTabConfig">
+		<ui:attributes text="Filter" />
+	</ui:with>
+	 -->
+  
+  	<!-- 
+	<container:SimpleContainer>
+		<container:child layoutData="{outerData}">
+			<tabs:TabPanel borders="false" bodyBorder="true">
+				<tabs:child config="{listTabConfig}">
+  	 -->
+					<container:VerticalLayoutContainer>
+						<row:child layoutData="{rowData}">
+							 <toolbar:ToolBar ui:field="toolBar">
+							 </toolbar:ToolBar>
+						</row:child>
+						<row:child layoutData="{rowFillData}">
+							<grid:Grid ui:field="grid">
+							</grid:Grid>
+						</row:child>
+					</container:VerticalLayoutContainer>
+					<!-- 
+				</tabs:child>
+				<tabs:child config="{filterTabConfig}">
+					<g:SimplePanel ui:field="filterPanel">
+					</g:SimplePanel>
+				</tabs:child>
+			</tabs:TabPanel>
+		</container:child>
+	</container:SimpleContainer>
+					 -->
+	
+</ui:UiBinder>

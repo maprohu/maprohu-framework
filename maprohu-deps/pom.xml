@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-framework</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+	<artifactId>maprohu-deps</artifactId>
+	<packaging>pom</packaging>
+	<modules>
+		<module>gwt-deps</module>
+		<module>gwt-provided-deps</module>
+		<module>gwt-compiler-deps</module>
+		<module>gwt-test-deps</module>
+		<module>webapp-deps</module>
+		<module>webapp-provided-deps</module>
+		<module>webapp-test-deps</module>
+		<module>common-deps</module>
+		<module>common-test-deps</module>
+		<module>domain-deps</module>
+		<module>domain-provided-deps</module>
+		<module>gwt-sources-deps</module>
+		<module>war-provided-deps</module>
+	</modules>
+</project>

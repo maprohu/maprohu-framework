@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<inherits name='hu.mapro.gwtui.GwtUi' />
+	<inherits name='com.sencha.gxt.ui.GXT' />
+	<!-- 
+	 -->
+
+	<!-- 
+	<inherits name="com.sencha.gxt.widget.core.Core" />
+	 -->
+	<inherits name="hu.mapro.gwtui.gxt.client.theme.blue.MaproBlue" />
+
+
+	<collapse-property name="user.agent.os" values="*" />
+	<collapse-property name="gxt.user.agent" values="air, safari*, chrome" />
+	<collapse-property name="gxt.user.agent" values="ie6, ie7" />
+	<collapse-property name="gxt.user.agent" values="gecko*" />
+
+
+	<!-- 
+	 -->
+	<stylesheet src="reset.css" />
+	<stylesheet src="gwtuigxt.css" />
+
+	<source path='client' />
+
+</module>

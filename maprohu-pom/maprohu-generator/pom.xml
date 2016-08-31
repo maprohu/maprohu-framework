@@ -1,0 +1,61 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-pom</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>maprohu-generator</artifactId>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.sun.codemodel</groupId>
+			<artifactId>codemodel</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model</artifactId>
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model-analyzer-bean</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+		 -->
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>maprohu-model-analyzer-meta</artifactId>
+			<version>0.0.14-SNAPSHOT</version>
+		</dependency>
+
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt.inject</groupId>
+			<artifactId>gin</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>cglib</groupId>
+			<artifactId>cglib-nodep</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.google.gwt</groupId>
+			<artifactId>gwt-user</artifactId>
+		</dependency>
+	</dependencies>
+
+</project>

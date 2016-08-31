@@ -1,0 +1,60 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>hu.mapro</groupId>
+		<artifactId>maprohu-pom</artifactId>
+		<version>0.0.14-SNAPSHOT</version>
+	</parent>
+	
+	<artifactId>earth-api-utility-library-gwt</artifactId>
+
+	<repositories>
+		<repository>
+			<id>nexus-thirdparty</id>
+			<url>http://tdev02.emsa.local:8083/nexus/content/repositories/thirdparty</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+	<dependencies>
+	
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-deps</artifactId>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-provided-deps</artifactId>
+			<type>pom</type>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>hu.mapro</groupId>
+			<artifactId>gwt-test-deps</artifactId>
+			<type>pom</type>
+			<scope>test</scope>
+		</dependency>
+	
+		<dependency>
+			<groupId>com.nitrous</groupId>
+			<artifactId>gwt-earth-3</artifactId>
+			<version>1.0</version>
+		</dependency>
+		
+	</dependencies>
+	
+	
+	<!-- 
+		http://code.google.com/p/gwt-earth-3/
+		
+		mvn deploy:deploy-file -Durl=dav:https://maprohu-framework.googlecode.com/svn/repo/thirdparty/  -DgroupId=com.nitrous -DartifactId=gwt-earth-3 -Dversion=0.9 -DrepositoryId=mapro-framework-thirdparty -Dpackaging=jar -f D:\git\google\maprohu-framework\maprohu-framework\maprohu-pom\gwt-pom\gwtlib-nores-pom\gwtlib-pom\earth-api-utility-library-gwt\src\misc\dav-pom.xml -Dfile=D:\dl\gwt-earth-3-0.9.jar
+		mvn deploy:deploy-file -Durl=dav:https://maprohu-framework.googlecode.com/svn/repo/thirdparty/  -DgroupId=com.nitrous -DartifactId=gwt-earth-3 -Dversion=0.9 -DrepositoryId=mapro-framework-thirdparty -Dpackaging=jar -f D:\git\google\maprohu-framework\maprohu-framework\maprohu-pom\gwt-pom\gwtlib-nores-pom\gwtlib-pom\earth-api-utility-library-gwt\src\misc\dav-pom.xml -Dfile=D:\dl\GwtEarth3-0.9-JavaDoc.zip -Dclassifier=javadoc
+	 -->
+</project>

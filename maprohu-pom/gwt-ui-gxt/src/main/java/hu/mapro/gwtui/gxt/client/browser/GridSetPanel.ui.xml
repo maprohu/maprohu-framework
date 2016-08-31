@@ -1,0 +1,47 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui='urn:ui:com.google.gwt.uibinder'
+	xmlns:gxt="urn:import:com.sencha.gxt.widget.core.client" xmlns:row="urn:import:com.sencha.gxt.widget.core.client.container"
+	xmlns:toolbar="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:menu="urn:import:com.sencha.gxt.widget.core.client.menu"
+	xmlns:button="urn:import:com.sencha.gxt.widget.core.client.button"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:tb="urn:import:com.sencha.gxt.widget.core.client.toolbar"
+	xmlns:grid="urn:import:com.sencha.gxt.widget.core.client.grid">
+
+
+	<ui:with type="com.sencha.gxt.widget.core.client.grid.ColumnModel" field="cm"/>
+	<ui:with type="com.sencha.gxt.data.shared.ListStore" field="store"/>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="middleData">
+		<ui:attributes width="1" height="1" />
+	</ui:with>
+
+	<ui:with
+		type="com.sencha.gxt.widget.core.client.container.VerticalLayoutContainer.VerticalLayoutData"
+		field="bottomData">
+		<ui:attributes width="1" height="-1" />
+	</ui:with>
+
+	<ui:with type="com.sencha.gxt.widget.core.client.grid.GridView"
+		field="view">
+		<ui:attributes stripeRows="true" forceFit="true"/>
+	</ui:with>
+
+	<row:VerticalLayoutContainer borders="false">
+		<row:child layoutData="{bottomData}">
+			<toolbar:ToolBar ui:field="toolBar">
+				<button:ToolButton ui:field="addButton" />
+				<button:ToolButton ui:field="removeButton" />
+			</toolbar:ToolBar>
+		</row:child>
+		<row:child layoutData="{middleData}">
+			<grid:Grid ui:field="grid" cm="{cm}" store="{store}" view="{view}"
+				loadMask="true" columnReordering="true" borders="false">
+			</grid:Grid>
+		</row:child>
+	</row:VerticalLayoutContainer>
+
+
+
+</ui:UiBinder>

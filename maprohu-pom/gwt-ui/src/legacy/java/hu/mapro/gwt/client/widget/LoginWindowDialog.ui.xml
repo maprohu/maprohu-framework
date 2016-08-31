@@ -1,0 +1,43 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:c="urn:import:com.google.gwt.user.cellview.client"
+	xmlns:m="urn:import:hu.mapro.gwt.client.widget">
+
+	<ui:with field='constants' type='hu.mapro.gwt.client.widget.IUiConstants' />
+	<ui:with field='images' type='hu.mapro.gwtui.client.images.GwtUiImages' />
+	<ui:with field='labels' type='hu.mapro.gwt.client.widget.UiLabels' />
+
+	<ui:style type="hu.mapro.gwt.client.widget.LoginWindowDialog.Style">
+		@eval headerTitleHeight hu.mapro.gwt.client.widget.UiConstants.headerTitleHeight();
+		@eval panelMargin hu.mapro.gwt.client.widget.UiConstants.panelMargin();
+		@eval frameWidth hu.mapro.gwt.client.widget.UiConstants.frameWidth();
+		@eval borderWidth hu.mapro.gwt.client.widget.UiConstants.borderWidth();
+		@eval minusBorderWidth hu.mapro.gwt.client.widget.UiConstants.minusBorderWidth();
+		@eval frameColor hu.mapro.gwt.client.widget.UiConstants.frameColor();
+		@eval borderColor hu.mapro.gwt.client.widget.UiConstants.borderColor();
+		@eval backgroundColor hu.mapro.gwt.client.widget.UiConstants.backgroundColor();
+
+		.busy {
+		}
+		
+		.idle {
+		}
+
+	</ui:style>
+
+
+	<g:DialogBox ui:field="dialogBox" modal="true">
+		<g:caption>Login</g:caption>
+		<g:HTMLPanel>
+			Username <g:TextBox ui:field="userName"/>
+			Password <g:PasswordTextBox ui:field="password"/>
+			<g:HTMLPanel ui:field="rememberMePanel">
+				Remember me <g:CheckBox ui:field="rememberMe"></g:CheckBox>
+			</g:HTMLPanel>
+			<g:Button ui:field='cancelButton'>Cancel</g:Button>
+			<g:Button ui:field='okButton'>Okay</g:Button>
+			<div ui:field="busyPanel" class="{style.idle}"/>
+		</g:HTMLPanel>
+	</g:DialogBox>
+
+</ui:UiBinder>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" 
+	targetNamespace="http://mapro.hu/model/descriptor"
+	xmlns:m="http://mapro.hu/model/descriptor"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified"	
+>
+
+
+	<xs:element name="model">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:choice>
+					<xs:element ref="m:client-class" />
+					<xs:element ref="m:client-package" />
+				</xs:choice>
+				<xs:choice minOccurs="0">
+					<xs:element ref="m:server-class" />
+					<xs:element ref="m:server-package" />
+				</xs:choice>
+				<xs:choice minOccurs="0">
+					<xs:element name="shared-class" type="xs:string"/>
+					<xs:element name="shared-package" type="xs:string"/>
+				</xs:choice>
+				<xs:element ref="m:generate" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="binders">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="m:binder" minOccurs="1" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="binder">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="m:target-binder-class" />
+				<xs:element ref="m:custom-package"  minOccurs="1" maxOccurs="unbounded"/>
+				<xs:element ref="m:generated-package" minOccurs="1"	maxOccurs="unbounded" />
+			</xs:sequence>
+			<xs:attribute name="client" default="true" type="xs:boolean"/>
+		</xs:complexType>
+	</xs:element>
+	
+	
+	<xs:element name="generate">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="m:source-package" minOccurs="0"
+					maxOccurs="unbounded" />
+				<xs:element ref="m:meta-packages" minOccurs="0"
+					maxOccurs="unbounded" />
+				<xs:element ref="m:service-class" minOccurs="0"
+					maxOccurs="1" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="meta-packages">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="entity" type="xs:string" minOccurs="0"
+					maxOccurs="unbounded" />
+				<xs:element name="view" type="xs:string" minOccurs="0"
+					maxOccurs="unbounded" />
+				<xs:element name="value" type="xs:string" minOccurs="0"
+					maxOccurs="unbounded" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	
+	<xs:element name="source-package" type="xs:string" />
+	<xs:element name="client-package" type="xs:string" />
+	<xs:element name="generated-package" type="xs:string" />
+	<xs:element name="service-class" type="xs:string" />
+	<xs:element name="client-class" type="xs:string" />
+	<xs:element name="server-class" type="xs:string" />
+	<xs:element name="server-package" type="xs:string" />
+	<xs:element name="target-binder-class" type="xs:string" />
+	<xs:element name="target-package" type="xs:string" />
+	<xs:element name="custom-package" type="xs:string" />
+</xs:schema>

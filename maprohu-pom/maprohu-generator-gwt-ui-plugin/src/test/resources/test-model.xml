@@ -1,0 +1,7 @@
+<model xmlns="http://mapro.hu/model/descriptor">
+	<generate>
+		<target>hu.mapro.flang.domain.client</target>
+		<package>hu.mapro.flang.domain.server</package>
+		<package>hu.mapro.flang.domain.shared</package>
+	</generate>
+</model>
